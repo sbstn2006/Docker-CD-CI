@@ -24,7 +24,7 @@ public class testController {
 	}
 	
 	@GetMapping(value="/test_ci")
-	public String hello() {
+	public String ci() {
 		return "Hola desde CI con GitHub Actions";
 	}
 	@GetMapping(value="/sumar")
