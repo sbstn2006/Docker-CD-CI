@@ -20,5 +20,5 @@ jobs:
       - name: Compilar proyecto
         run: mvn clean package -DskipTests
       - name: Construir imagen Docker
-        run: docker build -t backend-spring .
+        run: docker build -t backend-springboot .
     
