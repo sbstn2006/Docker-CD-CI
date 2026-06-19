@@ -27,6 +27,12 @@ public class testController {
 	public String ci() {
 		return "Hola desde CI con GitHub Actions";
 	}
+
+	@GetMapping(value="/ruta_prueba")
+	public String rutaNueva() {
+		return "Esta es una ruta creada por Dopey";
+	}
+
 	@GetMapping(value="/sumar")
     public int sumar(
             @RequestParam int numero1,
