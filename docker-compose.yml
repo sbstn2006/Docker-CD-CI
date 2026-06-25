@@ -11,7 +11,6 @@ services:
       - ./mysql/init:/docker-entrypoint-initdb.d
 
   backend:
-    build: ./test15b
     image: sbstn2006/backend-springboot:latest
     container_name: backend-springboot
     ports:
@@ -25,7 +24,6 @@ services:
       SPRING_DATASOURCE_PASSWORD: 12345678
 
   frontend:
-    build: ./frontend_test
     image: sbstn2006/frontend-html:latest
     container_name: frontend-html
     ports:
