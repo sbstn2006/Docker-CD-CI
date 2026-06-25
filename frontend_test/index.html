@@ -40,6 +40,7 @@
         function sumar() {
             const numero1 = document.getElementById("numero1").value;
             const numero2 = document.getElementById("numero2").value;
+            const numero3 = document.getElementById("numero3").value;
 
             fetch(`${API_URL}/sumar?numero1=${numero1}&numero2=${numero2}&numero3=${numero3}`)
                 .then(response => response.text())
