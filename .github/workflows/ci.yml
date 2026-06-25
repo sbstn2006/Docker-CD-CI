@@ -61,9 +61,9 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}  
       - name: Construir imagen Docker frontend
-        run: docker build -t dopey980/frontend-html:latest .
+        run: docker build -t sbstn2006/frontend-html:latest .
       - name: Publicar imagen en Docker Hub frontend
-  #       run: docker push dopey980/frontend-html:latest
+        run: docker push sbstn2006/frontend-html:latest
   # deploy-frontend:
   #   needs: build-frontend
   #   runs-on: self-hosted
