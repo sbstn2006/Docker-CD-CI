@@ -39,4 +39,11 @@ jobs:
           cd C:\Users\sesba\Desktop\proyecto_docker_compose_limpio\proyecto_docker_compose_limpio
           docker compose pull backend
           docker compose up -d backend
-
+    build-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend_test
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
