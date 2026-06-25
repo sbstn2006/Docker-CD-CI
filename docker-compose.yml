@@ -25,7 +25,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: 12345678
 
   frontend:
-    build: ./frontend_test
+    build: frontend_test
     image: sbstn2006/frontend-html:latest
     container_name: frontend-html
     ports:
