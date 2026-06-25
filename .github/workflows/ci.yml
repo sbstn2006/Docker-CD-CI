@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Actualizar contenedor backend 
         run: |
-          cd C:\Users\sesba\Desktop\proyecto_docker_compose_limpio\proyecto_docker_compose_limpio
+          cd C:\Users\sesba\Desktop\Docker-CD-CI
           docker compose pull backend
           docker compose up -d backend
   build-frontend:
@@ -64,12 +64,12 @@ jobs:
         run: docker build -t sbstn2006/frontend-html:latest .
       - name: Publicar imagen en Docker Hub frontend
         run: docker push sbstn2006/frontend-html:latest
-  # deploy-frontend:
-  #   needs: build-frontend
-  #   runs-on: self-hosted
-  #   steps:
-  #     - name: Actualizar contenedor frontend 
-  #       run: |
-  #         cd C:\Users\Joseph\Uniempresarial\Docker-CD-CI 
-  #         docker compose pull frontend
-  #         docker compose up -d frontend
+  deploy-frontend:
+    needs: build-frontend
+    runs-on: self-hosted
+    steps:
+      - name: Actualizar contenedor frontend 
+        run: |
+          cd C:\Users\sesba\Desktop\Docker-CD-CI 
+          docker compose pull frontend
+          docker compose up -d frontend
